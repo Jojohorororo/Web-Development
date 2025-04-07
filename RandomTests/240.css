@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+/* Glowing cursor styles */
+.glowing {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, rgba(15, 194, 226, 0.8) 0%, rgba(27, 100, 168, 0.89) 100%);
+    box-shadow: 0px 0px 40px rgb(3, 216, 244);
+    z-index: 1000; /* Make sure the cursor is above other elements */
+    pointer-events: none; /* Ensure the cursor doesn't interfere with click events */
+}
+
+/* Sidebar styles */
+.container {
+    top: 15vh;
+    height: 40vh;
+    width: 20vw;
+    position: fixed;
+    color: white;
+    text-align: right;
+}
+
+.element {
+    background-color: rgb(39, 37, 37);
+    height: 10vh;
+    line-height: 10vh;
+    transform: translateX(-10vw);
+    transition: 1s;
+    padding-right: 1.5vw;
+    cursor: pointer;
+}
+
+.element:nth-child(even) {
+    background-color: rgb(57, 55, 55);
+}
+
+.element:hover {
+    transform: translateX(-0.2vw);
+    padding-right: 7vw;
+    border: 2px solid white;
+}
